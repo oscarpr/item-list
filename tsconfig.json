@@ -4,6 +4,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "button": [
+        "dist/button"
+      ],
       "card": [
         "dist/card"
       ]
