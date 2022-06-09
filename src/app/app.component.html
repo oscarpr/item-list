@@ -1,1 +1,13 @@
-<lib-button [label]="title"></lib-button>
+<main class="pokemon">
+  <section class="pokemon__header">
+    <app-pokemon-searcher
+      (onValueChange)="searchValue = $event"
+    ></app-pokemon-searcher>
+  </section>
+
+  <section class="pokemon__list">
+    <app-pokemon-list
+      [pokemons]="((pokemons$ | async) || []) | filter: searchValue"
+    ></app-pokemon-list>
+  </section>
+</main>

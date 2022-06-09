@@ -1,0 +1,10 @@
+<div class="searcher">
+    <label>Name or number</label>
+  <input
+    type="text"
+    placeholder="Ex. Bulbasaur"
+    #input
+    (keydown.enter)="onValueChange.emit(input.value)"
+    (blur)="onValueChange.emit(input.value)"
+  />
+</div>
